@@ -40,3 +40,25 @@ To be added
 
 <img width="1589" height="948" alt="Screenshot 2025-08-27 at 17 21 45" src="https://github.com/user-attachments/assets/ff81b22d-4857-4165-8307-46d46fb35305" />
 
+
+### Realtime Likes
+https://github.com/user-attachments/assets/84d2b361-3a05-4335-b5a4-d6b2740a44ba
+
+
+### Realtime Profile Update
+https://github.com/user-attachments/assets/fb6239cf-7a8f-4173-b838-492db2b202d7
+
+
+### Realtime Trending
+https://github.com/user-attachments/assets/c8c2cdd5-f4f7-4dac-a701-a90385996282
+
+### Share and Deeplink(IOS and Android)
+
+
+
+
+
+
+
+
+
