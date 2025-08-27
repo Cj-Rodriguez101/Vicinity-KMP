@@ -36,6 +36,10 @@ Sample Project to re-use checkpoint for future KMP Projects
 * Android GeoHash [Android GeoHash](https://github.com/drfonfon/android-kotlin-geohash)
 * JVM GeoHash [JVM Geohash](https://github.com/kungfoo/geohash-java)
 * Shimmer [Shimmer](https://github.com/valentinilk/compose-shimmer)
+* Kotlin Serialization [Serialization](https://kotlinlang.org/docs/serialization.html#formats)
+* Ticket Master Discover Api [Discover](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2)
+* Location Iq [LIQ](https://my.locationiq.com)
+* IP Location Api [IP](http://ip-api.com/json/)
 
 <img width="1589" height="948" alt="Screenshot 2025-08-27 at 17 21 45" src="https://github.com/user-attachments/assets/ff81b22d-4857-4165-8307-46d46fb35305" />
 
