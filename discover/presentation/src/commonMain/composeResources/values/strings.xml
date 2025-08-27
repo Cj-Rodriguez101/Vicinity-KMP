@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_country">Choose a country</string>
+    <string name="search_events">Search events and venues</string>
+    <plurals name="venue">
+        <item quantity="one">%1$d Venue</item>
+        <item quantity="other">%1$d Venues</item>
+    </plurals>
+</resources>

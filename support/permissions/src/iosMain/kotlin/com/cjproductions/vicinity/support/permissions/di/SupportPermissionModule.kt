@@ -1,0 +1,12 @@
+package com.cjproductions.vicinity.support.permissions.di
+
+import com.cjproductions.vicinity.support.permissions.SupportPermissionController
+import dev.icerock.moko.permissions.ios.PermissionsController
+import dev.icerock.moko.permissions.ios.PermissionsControllerProtocol
+import org.koin.core.module.dsl.singleOf
+import org.koin.dsl.module
+
+actual val supportPermissionModule = module {
+  single<PermissionsControllerProtocol> { PermissionsController() }
+  singleOf(::SupportPermissionController)
+}

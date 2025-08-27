@@ -1,0 +1,254 @@
+CREATE INDEX idx_event_title_category ON EventEntity(normalizedTitle, category);
+
+CREATE TABLE DateEntity (
+ date REAL NOT NULL PRIMARY KEY
+);
+
+insertDate:
+INSERT OR IGNORE
+INTO DateEntity (
+  date
+) VALUES ( ? );
+
+deleteAllDates:
+DELETE FROM DateEntity;
+
+CREATE TABLE EventEntity (
+  normalizedTitle TEXT NOT NULL,
+  category TEXT NOT NULL,
+  venueIds TEXT NOT NULL,
+  eventIds TEXT NOT NULL,
+  marketIds TEXT,
+  originalTitle TEXT NOT NULL,
+  imageUrl TEXT NOT NULL,
+  earliestDate REAL,
+  latestDate REAL,
+  createdAt REAL NOT NULL,
+  PRIMARY KEY (normalizedTitle, category)
+);
+
+CREATE TABLE RemoteEventKeys (
+  id TEXT PRIMARY KEY,
+  nextKey INTEGER
+);
+
+getRemoteEventKeyById:
+SELECT * FROM RemoteEventKeys WHERE id = :id;
+
+insertRemoteEventKey:
+INSERT OR REPLACE
+INTO RemoteEventKeys (
+  id,
+  nextKey
+) VALUES ( ?, ? );
+
+countEvents:
+SELECT count(*) FROM EventEntity;
+
+events:
+SELECT * FROM EventEntity ORDER BY createdAt LIMIT :limit OFFSET :offset;
+
+deleteAllEvents:
+DELETE FROM EventEntity;
+
+insertEvent:
+INSERT OR REPLACE
+INTO EventEntity (
+  normalizedTitle,
+  category,
+  originalTitle,
+  venueIds,
+  eventIds,
+  marketIds,
+  imageUrl,
+  earliestDate,
+  createdAt
+) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? );
+
+getEvent:
+SELECT * FROM EventEntity
+WHERE normalizedTitle = ? AND category = ? LIMIT 1;
+
+lastInsertRowId:
+SELECT last_insert_rowid();
+
+CREATE TABLE ImageEntity (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ratio TEXT NOT NULL,
+  url TEXT NOT NULL,
+  width INTEGER NOT NULL,
+  height INTEGER NOT NULL
+);
+
+deleteAllImages:
+DELETE FROM ImageEntity;
+
+insertImage:
+INSERT OR REPLACE
+INTO ImageEntity (
+  ratio,
+  url,
+  width,
+  height
+) VALUES ( ?, ?, ?, ? );
+
+CREATE TABLE SearchEntity (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  normalizedName TEXT NOT NULL,
+  name TEXT,
+  location TEXT,
+  latitude REAL,
+  longitude REAL,
+  UNIQUE(normalizedName) ON CONFLICT REPLACE
+);
+
+getSearches:
+SELECT * FROM SearchEntity;
+
+deleteAllSearch:
+DELETE FROM SearchEntity;
+
+deleteSpecificSearch:
+DELETE FROM SearchEntity WHERE normalizedName = :normalizedName;
+
+insertSearch:
+INSERT OR REPLACE
+INTO SearchEntity (
+  normalizedName,
+  name,
+  location,
+  latitude,
+  longitude
+) VALUES ( ?, ?, ?, ?,  ? );
+
+CREATE TABLE SegmentEntity (
+  id TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+deleteAllSegments:
+DELETE FROM SegmentEntity;
+
+insertSegment:
+INSERT OR REPLACE
+INTO SegmentEntity (
+  id,
+  name
+) VALUES ( ?, ? );
+
+segments:
+SELECT *
+FROM SegmentEntity
+LIMIT :limit OFFSET :offset;
+
+CREATE TABLE RemoteSegmentKeys (
+  id TEXT PRIMARY KEY,
+  nextKey INTEGER
+);
+
+getRemoteSegmentKeyById:
+SELECT * FROM RemoteSegmentKeys WHERE id = :id;
+
+insertRemoteSegmentKey:
+INSERT OR REPLACE
+INTO RemoteSegmentKeys (
+  id,
+  nextKey
+) VALUES ( ?, ? );
+
+countSegments:
+SELECT count(*) FROM SegmentEntity;
+
+CREATE TABLE VenueEntity (
+  id TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL,
+  city TEXT,
+  state TEXT,
+  country TEXT
+);
+
+deleteAllVenues:
+DELETE FROM VenueEntity;
+
+insertVenue:
+INSERT OR REPLACE
+INTO VenueEntity (
+  id,
+  name,
+  city,
+  state,
+  country
+) VALUES ( ?, ?, ?, ?, ? );
+
+CREATE TABLE EventVenuesEntity (
+    normalizedTitle TEXT NOT NULL,
+    category TEXT NOT NULL,
+    eventId TEXT NOT NULL,
+    venueName TEXT NOT NULL,
+    venueAddress TEXT,
+    venueLat REAL,
+    venueLng REAL,
+    dates TEXT,
+    PRIMARY KEY (normalizedTitle, category, eventId)
+);
+
+insertEventVenue:
+INSERT OR REPLACE
+INTO EventVenuesEntity (
+  normalizedTitle,
+  category,
+  eventId,
+  venueName,
+  venueAddress,
+  venueLat,
+  venueLng,
+  dates
+) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteAllEventVenue:
+DELETE FROM EventVenuesEntity;
+
+CREATE TABLE LikeEntity (
+    userId TEXT NOT NULL,
+    normalizedTitle TEXT NOT NULL,
+    title TEXT NOT NULL,
+    category TEXT NOT NULL,
+    image TEXT,
+    createdAt REAL NOT NULL,
+    startDateTime REAL,
+    endDateTime REAL,
+    PRIMARY KEY (userId, normalizedTitle)
+);
+
+isLiked:
+SELECT EXISTS(SELECT 1 FROM LikeEntity WHERE userId = :userId AND normalizedTitle = :title LIMIT 1);
+
+getAllLikes:
+SELECT * FROM LikeEntity ORDER BY createdAt;
+
+countLikes:
+SELECT COUNT(*) FROM LikeEntity WHERE userId = :userId;
+
+likes:
+SELECT * FROM LikeEntity WHERE userId = :userId
+ORDER BY startDateTime IS NULL DESC, startDateTime DESC
+LIMIT :limit OFFSET :offset;
+
+insertLike:
+INSERT OR REPLACE
+INTO LikeEntity (
+  userId,
+  normalizedTitle,
+  title,
+  category,
+  image,
+  startDateTime,
+  endDateTime,
+  createdAt
+) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteSpecificLike:
+DELETE FROM LikeEntity WHERE userId =:userId AND normalizedTitle =:normalizedTitle;
+
+deleteAllLikes:
+DELETE FROM LikeEntity;

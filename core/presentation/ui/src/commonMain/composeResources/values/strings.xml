@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_disk_full">Failed to save the item because your disk is full.</string>
+    <string name="error_request_timeout">The request timed out.</string>
+    <string name="error_too_many_requests">You\'ve hit your rate limit.</string>
+    <string name="error_no_internet">Couldn\'t reach server, please check your connection.</string>
+    <string name="error_payload_too_large">The file you\'re trying to upload is too large.</string>
+    <string name="error_server_error">Oops, something went wrong, please try again.</string>
+    <string name="error_serialization">Oops, couldn\'t parse data.</string>
+    <string name="error_unknown">An unknown error occurred.</string>
+    <string name="error_generic">Something went wrong.</string>
+    <string name="no_events">No Events found</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="sports">Sports</string>
+    <string name="music">Music</string>
+    <string name="film">Film</string>
+    <string name="privacy_url">https://www.termsfeed.com/live/1fa255dd-1992-48ad-ad46-d1456963d471</string>
+    <string name="terms_url">https://www.termsfeed.com/live/87365858-6dfb-4747-a174-f84d8e67fab0</string>
+    <string name="arts_and_theatre">Arts and Theatre</string>
+    <string name="retry">Retry</string>
+    <string name="all">All</string>
+    <string name="cancel">Cancel</string>
+    <string name="app_name">Vicinity</string>
+    <string name="log_out">Log Out</string>
+    <string name="profile">Profile</string>
+    <string name="discover">Discover</string>
+    <string name="likes">Likes</string>
+    <string name="global">Global</string>
+    <string name="trending">Trending</string>
+    <string name="added_to_liked_events">Added to Liked Events</string>
+    <string name="removed_from_liked_events">Removed from Liked Events</string>
+</resources>

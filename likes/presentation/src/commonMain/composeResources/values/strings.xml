@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trending">Trending</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="past">Past</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_to_view_liked_events">Sign In To View Liked Events</string>
+    <string name="no_data_available">No data available</string>
+    <string name="popular_event_categories">Popular Event Categories</string>
+    <string name="highest_rated_events">Highest Rated Events</string>
+    <string name="categories">Categories</string>
+</resources>

@@ -1,0 +1,127 @@
+name: Deploy To Firebase App Distribution
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Create local.properties
+        run: |
+          echo "sdk.dir=$ANDROID_HOME" >> local.properties
+          echo "base.url=${{ secrets.BASE_URL }}" >> local.properties
+          echo "nm.base.url=${{ secrets.NM_BASE_URL }}" >> local.properties
+          echo "liq.base.url=${{ secrets.LIQ_BASE_URL }}" >> local.properties
+          echo "liq.api.key=${{ secrets.LIQ_API_KEY }}" >> local.properties
+          echo "ip.base.url=${{ secrets.IP_BASE_URL }}" >> local.properties
+          echo "api.key=${{ secrets.API_KEY }}" >> local.properties
+          echo "storage.url=${{ secrets.STORAGE_URL }}" >> local.properties
+          echo "project.id=${{ secrets.PROJECT_ID }}" >> local.properties
+          echo "client.id=${{ secrets.CLIENT_ID }}" >> local.properties
+          echo "tmapi.key=${{ secrets.TMAPI_KEY }}" >> local.properties
+          echo "api.secret=${{ secrets.API_SECRET }}" >> local.properties
+          echo "supabase.url=${{ secrets.SUPABASE_URL }}" >> local.properties
+          echo "supabase.api.key=${{ secrets.SUPABASE_API_KEY }}" >> local.properties
+
+      - name: Grant execution permissions for gradlew
+        run: chmod +x gradlew
+
+      - name: Run Unit tests
+        run: ./gradlew clean testDebug
+
+  distribute:
+    name: Distribute APK to Firebase
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Create local.properties
+        run: |
+          echo "sdk.dir=$ANDROID_HOME" >> local.properties
+          echo "base.url=${{ secrets.BASE_URL }}" >> local.properties
+          echo "nm.base.url=${{ secrets.NM_BASE_URL }}" >> local.properties
+          echo "liq.base.url=${{ secrets.LIQ_BASE_URL }}" >> local.properties
+          echo "liq.api.key=${{ secrets.LIQ_API_KEY }}" >> local.properties
+          echo "ip.base.url=${{ secrets.IP_BASE_URL }}" >> local.properties
+          echo "api.key=${{ secrets.API_KEY }}" >> local.properties
+          echo "storage.url=${{ secrets.STORAGE_URL }}" >> local.properties
+          echo "project.id=${{ secrets.PROJECT_ID }}" >> local.properties
+          echo "client.id=${{ secrets.CLIENT_ID }}" >> local.properties
+          echo "tmapi.key=${{ secrets.TMAPI_KEY }}" >> local.properties
+          echo "api.secret=${{ secrets.API_SECRET }}" >> local.properties
+          echo "supabase.url=${{ secrets.SUPABASE_URL }}" >> local.properties
+          echo "supabase.api.key=${{ secrets.SUPABASE_API_KEY }}" >> local.properties
+
+      - name: Update Version Code and Name in Catalog
+        run: |
+          echo "Updating version to ${{ github.run_number }}"
+          sed -i "s/projectVersionCode = \"[0-9]*\"/projectVersionCode = \"${{ github.run_number }}\"/" gradle/libs.versions.toml
+          sed -i "s/projectVersionName = \"[^\"]*\"/projectVersionName = \"1.0.${{ github.run_number }}\"/" gradle/libs.versions.toml
+          echo "Updated version catalog:"
+          grep -E "(projectVersionCode|projectVersionName)" gradle/libs.versions.toml
+
+      - name: Grant execution permissions for gradlew
+        run: chmod +x gradlew
+
+      - name: Set up Android SDK
+        if: ${{ env.ACT }}
+        uses: android-actions/setup-android@v3
+
+      - name: Assemble Release APK
+        run: ./gradlew assembleRelease
+
+      - name: Sign APK Release
+        id: sign_apk
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: composeApp/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.ANDROID_KEYSTORE }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          alias: ${{ secrets.ANDROID_KEY_ALIAS }}
+          keyPassword: ${{ secrets.ANDROID_ALIAS_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Signed release APK
+          path: composeApp/build/outputs/apk/release/composeApp-release-unsigned-signed.apk
+
+      - name: Generate Release Notes from Commit Message
+        run: |
+          echo "Version: 1.0.${{ github.run_number }}" > release_notes.txt
+          echo "" >> release_notes.txt
+          echo "Changes:" >> release_notes.txt
+          echo "${{ github.event.head_commit.message }}" >> release_notes.txt
+
+      - name: Deploy to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.7.1
+        with:
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+          groups: internal-testers
+          file: composeApp/build/outputs/apk/release/composeApp-release-unsigned-signed.apk
+          releaseNotesFile: release_notes.txt

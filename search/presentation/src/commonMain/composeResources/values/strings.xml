@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search">Search</string>
+    <string name="search_label">Search for events</string>
+    <string name="recent">Recent</string>
+    <string name="choose_location">Choose a location</string>
+    <string name="select_date">Select date(s)</string>
+    <plurals name="date">
+        <item quantity="one">Selected date</item>
+        <item quantity="other">Selected dates</item>
+    </plurals>
+    <string name="in">In</string>
+    <string name="to">To</string>
+    <string name="find_things">Find these to do</string>
+    <string name="search_results">Search Results</string>
+    <string name="filters">Filters</string>
+    <string name="date">Date</string>
+    <string name="classification">Classification</string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+    <string name="select">Select</string>
+    <string name="any_date">Any Date</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="this_weekend">This Weekend</string>
+    <string name="choose_a_date">Choose a date</string>
+    <string name="relevance">Relevance</string>
+    <string name="name">Name</string>
+    <string name="sort">Sort</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+</resources>

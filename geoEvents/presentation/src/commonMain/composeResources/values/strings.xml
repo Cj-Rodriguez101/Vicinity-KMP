@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="not_set">Not Set</string>
+    <string name="location">Location</string>
+    <string name="your_location">Your Location</string>
+    <string name="search_location">Search For Location</string>
+    <string name="where_are_you_located">Where are you located?</string>
+    <string name="use_current_location">Use Current Location</string>
+    <string name="loading_events">Loading events...</string>
+    <string name="total_events">Total Events:</string>
+    <string name="no_location_permission">No location permission</string>
+</resources>

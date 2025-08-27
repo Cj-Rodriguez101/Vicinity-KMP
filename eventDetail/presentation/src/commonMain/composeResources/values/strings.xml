@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gallery">Gallery</string>
+    <string name="info">Info</string>
+    <string name="change_venue">Change Venue</string>
+    <string name="please_note">Please Note</string>
+    <string name="no_events_found">No Events Found</string>
+    <string name="location">Location</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="events_on">Events On %1$s</string>
+    <string name="event_dates">Event Dates · %1$d</string>
+    <plurals name="event">
+        <item quantity="one">%1$d event</item>
+        <item quantity="other">%1$d events</item>
+    </plurals>
+</resources>

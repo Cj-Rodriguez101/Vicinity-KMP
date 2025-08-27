@@ -1,0 +1,13 @@
+plugins {
+    alias(libs.plugins.vicinity.application.domain)
+}
+
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(projects.core.domain)
+            implementation(projects.location.domain)
+            api(projects.discover.domain)
+        }
+    }
+}

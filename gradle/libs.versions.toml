@@ -1,0 +1,231 @@
+[versions]
+agp = "8.12.1"
+androidTools = "31.9.2"
+android-compileSdk = "35"
+android-minSdk = "24"
+android-targetSdk = "35"
+androidx-activityCompose = "1.10.1"
+androidx-appcompat = "1.7.0"
+androidx-constraintlayout = "2.2.1"
+androidx-core-ktx = "1.16.0"
+androidx-espresso-core = "3.6.1"
+androidx-lifecycle = "2.9.1"
+androidx-material = "1.12.0"
+androidx-test-junit = "1.2.1"
+androidx-preference = "1.2.1"
+compose-multiplatform = "1.8.2"
+geohash = "1.4.0"
+android-geohash = "1.0"
+junit = "4.13.2"
+kotlin = "2.2.0"
+ksp = "2.1.21-2.0.2"
+kotlinx-coroutines = "1.10.2"
+kotlinx-serialization = "1.8.1"
+ktor = "3.1.2"
+koin = "4.0.3"
+supabase = "3.1.4"
+jetbrainsKotlinJvm = "2.1.10"
+ktorClientLogging = "3.0.1"
+kermit = "2.0.5"
+buildconfig = "4.1.2"
+coil = "3.1.0"
+datastore = "1.1.4"
+multiplatform-settings = "1.3.0"
+sqldelight = "2.1.0"
+datetime = "0.6.2"
+kotlinStdlib = "2.2.0"
+runner = "1.5.2"
+core = "1.5.0"
+java-jdk = "21"
+buildKonfig = "0.17.1"
+paging-version = "3.3.6"
+pagingCompose = "3.3.0-alpha02-0.5.1"
+navigationCompose = "2.9.0-beta01"
+pagingExtensions = "2.1.0"
+mokoGeo = "0.8.0"
+mokoPermission = "0.19.1"
+compass = "2.3.1"
+composeIcons = "1.1.1"
+contraintLayout = "0.6.0"
+flagkit = "1.1.0"
+composeMap = "6.1.0"
+secretPlugin = "2.0.1"
+mapLibre = "0.8.2"
+coreSplashscreen = "1.0.1"
+calendar = "2.7.0"
+adaptive = "1.1.1"
+connectivity = "2.1.0"
+googleServicesPlugin = "4.4.3"
+androidCrashlytics = "3.0.6"
+firebase = "2.1.0"
+firebaseBom = "33.1.1"
+fileKit = "0.10.0-beta04"
+androidx-credentials = "1.5.0"
+google-identity-googleid = "1.1.1"
+koalaCharts = "0.9.0"
+mapPir = "0.10.0"
+shimmer = "1.3.3"
+haze = "1.6.10"
+basicHaptics = "0.2.5"
+navigationSuite = "1.3.2"
+
+# Project versions
+projectApplicationId = "com.cjproductions.vicinity"
+projectVersionName = "1.0"
+projectMinSdkVersion = "24"
+projectTargetSdkVersion = "35"
+projectCompileSdkVersion = "35"
+projectVersionCode = "1"
+
+[libraries]
+hsr-geohash = { module = "ch.hsr:geohash", version.ref = "geohash" }
+kotlin-date-time = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "androidx-material" }
+androidx-material3 = { group = "com.google.android.material3", name = "material3" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging-version" }
+androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging-version" }
+navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+#supabase-client = { module = "io.github.jan-tennert.supabase:realtime-kt", version.ref = "supabase" }
+supabase-bom = { group = "io.github.jan-tennert.supabase", name = "bom", version.ref = "supabase" }
+supabase-auth = { group = "io.github.jan-tennert.supabase", name = "auth-kt", version.ref = "supabase" }
+supabase-realtime = { group = "io.github.jan-tennert.supabase", name = "realtime-kt", version.ref = "supabase" }
+supabase-postgrest = { group = "io.github.jan-tennert.supabase", name = "postgrest-kt", version.ref = "supabase" }
+supabase-compose-auth = { group = "io.github.jan-tennert.supabase", name = "compose-auth", version.ref = "supabase" }
+firebase-storage = { group = "dev.gitlive", name = "firebase-storage", version.ref = "firebase" }
+firebase-crashlytics = { group = "dev.gitlive", name = "firebase-crashlytics", version.ref = "firebase" }
+android-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
+koin-compose-viewmodel-nav = { module = "io.insert-koin:koin-compose-viewmodel-navigation", version.ref = "koin" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+koin-android-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-java = { module = "io.ktor:ktor-client-java", version.ref = "ktor" }
+kermit-logging = { module = "co.touchlab:kermit", version.ref = "kermit" }
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network = { group = "io.coil-kt.coil3", name = "coil-network-ktor3", version.ref = "coil" }
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+sqldelight-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-ios = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight-desktop = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+sqldelight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-paging3-extensions = { module = "app.cash.sqldelight:androidx-paging3-extensions", version.ref = "pagingExtensions" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinStdlib" }
+androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
+androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
+compose-paging-common = { module = "app.cash.paging:paging-compose-common", version.ref = "pagingCompose" }
+moko-location = { module = "dev.icerock.moko:geo", version.ref = "mokoGeo" }
+moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "mokoPermission" }
+moko-permissions-location = { module = "dev.icerock.moko:permissions-location", version.ref = "mokoPermission" }
+moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "mokoPermission" }
+compass-geolocation = { module = "dev.jordond.compass:geolocation", version.ref = "compass" }
+compass-permissions-mobile = { module = "dev.jordond.compass:permissions-mobile", version.ref = "compass" }
+compass-geocoder = { module = "dev.jordond.compass:geocoder", version.ref = "compass" }
+compass-geolocation-mobile = { module = "dev.jordond.compass:geolocation-mobile", version.ref = "compass" }
+compass-geolocation-browser = { module = "dev.jordond.compass:geolocation-browser", version.ref = "compass" }
+compass-geocoder-mobile = { module = "dev.jordond.compass:geocoder-mobile", version.ref = "compass" }
+settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-settings" }
+settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-settings" }
+settings-serialization = { module = "com.russhwolf:multiplatform-settings-serialization", version.ref = "multiplatform-settings" }
+settings-observable = { module = "com.russhwolf:multiplatform-settings-make-observable", version.ref = "multiplatform-settings" }
+androidx-preference = { module = "androidx.preference:preference-ktx", version.ref = "androidx-preference" }
+font-awesome-icons = { module = "br.com.devsrsouza.compose.icons:font-awesome", version.ref = "composeIcons" }
+line-awesome-icons = { module = "br.com.devsrsouza.compose.icons:line-awesome", version.ref = "composeIcons" }
+constraint-layout = { module = "tech.annexflow.compose:constraintlayout-compose-multiplatform", version.ref = "contraintLayout" }
+flagkit-kmp = { module = "dev.carlsen.flagkit:flagkit", version.ref = "flagkit" }
+map-android = { module = "com.google.maps.android:maps-compose", version.ref = "composeMap" }
+map-libre = { module = "dev.sargunv.maplibre-compose:maplibre-compose", version.ref = "mapLibre" }
+compose-desktop-tooling = { module = "org.jetbrains.compose.ui:ui-tooling-preview-desktop", version.ref = "compose-multiplatform" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+compose-calendar = { module = "com.kizitonwose.calendar:compose-multiplatform", version.ref = "calendar" }
+compose-ui-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "compose-multiplatform" }
+material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
+
+connectivity-core = { module = "dev.jordond.connectivity:connectivity-core", version.ref = "connectivity" }
+connectivity-device = { module = "dev.jordond.connectivity:connectivity-device", version.ref = "connectivity" }
+connectivity-android = { module = "dev.jordond.connectivity:connectivity-android", version.ref = "connectivity" }
+connectivity-apple = { module = "dev.jordond.connectivity:connectivity-apple", version.ref = "connectivity" }
+connectivity-http = { module = "dev.jordond.connectivity:connectivity-http", version.ref = "connectivity" }
+connectivity-compose = { module = "dev.jordond.connectivity:connectivity-compose", version.ref = "connectivity" }
+connectivity-compose-device = { module = "dev.jordond.connectivity:connectivity-compose-device", version.ref = "connectivity" }
+connectivity-compose-http = { module = "dev.jordond.connectivity:connectivity-compose-http", version.ref = "connectivity" }
+filekit-core = { module = "io.github.vinceglb:filekit-core", version.ref = "fileKit" }
+filekit-dialogs = { module = "io.github.vinceglb:filekit-dialogs", version.ref = "fileKit" }
+filekit-dialogs-compose = { module = "io.github.vinceglb:filekit-dialogs-compose", version.ref = "fileKit" }
+filekit-coil = { module = "io.github.vinceglb:filekit-coil", version.ref = "fileKit" }
+androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "androidx-credentials" }
+androidx-credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "androidx-credentials" }
+google-identity-googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "google-identity-googleid" }
+github-koalaplot-charts = { module = "io.github.koalaplot:koalaplot-core", version.ref = "koalaCharts" }
+plrapps-mapcompose = { module = "ovh.plrapps:mapcompose-mp", version.ref = "mapPir" }
+android-geohash = { module = "com.github.drfonfon:android-kotlin-geohash", version.ref = "android-geohash" }
+compose-shimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version.ref = "shimmer" }
+compose-haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
+navigation-suite-desktop = { module = "androidx.compose.material3:material3-adaptive-navigation-suite-desktop", version.ref = "navigationSuite" }
+
+
+# Gradle
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+sqldelight-gradlePlugin = { group = "app.cash.sqldelight", name = "gradle-plugin", version.ref = "sqldelight" }
+gmazzo-buildconfig-gradlePlugin = { group = "com.github.gmazzo.buildconfig", name = "com.github.gmazzo.buildconfig.gradle.plugin", version.ref = "buildconfig" }
+
+[bundles]
+supabase = ["supabase-auth", "supabase-realtime", "supabase-postgrest", "supabase-compose-auth"]
+fileKit = ["filekit-core", "filekit-dialogs", "filekit-dialogs-compose", "filekit-coil"]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+gmazzoBuildconfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildconfig" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidKotlinMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+secretsMap = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretPlugin" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
+androidCrashlytics = { id = "com.google.firebase.crashlytics", version.ref = "androidCrashlytics" }
+
+vicinity-application = { id = "vicinity.application", version = "unspecified" }
+vicinity-application-compose = { id = "vicinity.application.compose", version = "unspecified" }
+vicinity-application-library-compose = { id = "vicinity.application.library.compose", version = "unspecified" }
+vicinity-application-sqldelight = { id = "vicinity.application.sqldelight", version = "unspecified" }
+vicinity-application-preference = { id = "vicinity.application.preference", version = "unspecified" }
+vicinity-application-libraryTarget = { id = "vicinity.application.libraryTarget", version = "unspecified" }
+vicinity-application-iosTarget = { id = "vicinity.application.iosTarget", version = "unspecified" }
+vicinity-application-desktopTarget = { id = "vicinity.application.desktopTarget", version = "unspecified" }
+vicinity-application-kmpTargets = { id = "vicinity.application.kmpTargets", version = "unspecified" }
+vicinity-application-domain = { id = "vicinity.application.domain", version = "unspecified" }
+vicinity-application-ktor = { id = "vicinity.application.ktor", version = "unspecified" }
+vicinity-application-koin = { id = "vicinity.application.koin", version = "unspecified" }
+vicinity-application-feature = { id = "vicinity.application.feature", version = "unspecified" }
