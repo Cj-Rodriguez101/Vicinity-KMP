@@ -1,31 +1,37 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
+# Vicinity KMP
+Compose Multiplatform MultiModule Project to Help User Find Events (KMP - Android, IOS, Desktop)
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Features
+* Display Paged Events Based On Location
+* Search Events Based On Location And Keyword
+* Like Any Event, Syncing Likes in Real time across devices
+* Share Events Between Users - Deeplink on Android And IOS
+* Login, Sign Up and Delete Account
+* Filter and Sort Events Based On Classification and Dates
+* Display Real time charts of trend events based on user likes
+* Display Events Happening iN Location Based On Visible Map Bounds
+* Update User Profile Data (Picture, bio, name, password) syncing in Real time across devices
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## Architecture - MVVM/MVI
+## Tools
+* Jetpack Compose - Compose Multiplatform [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform)
+* Supabase for auth and real time database [Supabase](https://github.com/supabase-community/supabase-kt)
+* Firebase storage and Crashlytics [Firebase](https://github.com/GitLiveApp/firebase-kotlin-sdk)
+* Compass [Compass](https://github.com/jordond/compass)
+* Connectivity [Connectivity](https://github.com/jordond/connectivity)
+* Github Actions [Github Actions](https://github.com/features/actions)
+* SQLDelight [SQLDelight](https://github.com/sqldelight/sqldelight)
+* Multiplatform Settings [Settings](https://github.com/russhwolf/multiplatform-settings)
+* Map Compose [Map](https://github.com/p-lr/MapComposeMP)
+* Koin [Koin](https://github.com/InsertKoinIO/koin)
+* Paging3 [SQLDelight and Google Paging](https://sqldelight.github.io/sqldelight/2.1.0/2.x/extensions/androidx-paging3/app.cash.sqldelight.paging3/index.html)
+* FlagKit [Flagkit](https://github.com/acarlsen/kmp-flagkit)
+* Coil [Coil](https://github.com/coil-kt/coil)
+* Filekit [FileKit](https://github.com/vinceglb/FileKit)
+* Koala Charts [Koala](https://github.com/KoalaPlot/koalaplot-core)
+* Calendar [Calendar](https://github.com/kizitonwose/Calendar)
+* Android GeoHash [Android GeoHash](https://github.com/drfonfon/android-kotlin-geohash)
+* JVM GeoHash [JVM Geohash](https://github.com/kungfoo/geohash-java)
 
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
-
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
-
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
-
-[TicketMaster API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-images-v2)
-
-![Screenshot 2025-04-19 at 11 10 36](https://github.com/user-attachments/assets/5f3ae51c-4878-49ff-b3a4-e49f86519d83)
-
-We aim to use Supabase for auth and database
-Then Firebase storage to store image if needed
-
-We aim to have it running on Android, IOS and Desktop
-# Vicinity-KMP
+## To Test
+To be added
