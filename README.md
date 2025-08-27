@@ -72,36 +72,34 @@ https://github.com/user-attachments/assets/852638e2-09bf-48de-8ea9-6642e24f9208
 
 
 
-
-
 ## Important Notice
 This project requires a specific Supabase database schema to function properly. Simply adding API keys will not be sufficient to run the project locally, as you would need to recreate the exact database tables and structure.
 However these are the breakdown of the constants in local.properties
 
-# Ticketmaster API Configuration
-base.url=https://app.ticketmaster.com/
-api.key=YOUR_TICKETMASTER_API_KEY
-tmapi.key=YOUR_TICKETMASTER_API_KEY
+#### Ticketmaster API Configuration
+* base.url=https://app.ticketmaster.com/
+* api.key=YOUR_TICKETMASTER_API_KEY
+* tmapi.key=YOUR_TICKETMASTER_API_KEY
 
-# LocationIQ API Configuration  
-liq.base.url=https://api.locationiq.com/
-liq.api.key=YOUR_LOCATIONIQ_API_KEY
+#### LocationIQ API Configuration  
+* liq.base.url=https://api.locationiq.com/
+* liq.api.key=YOUR_LOCATIONIQ_API_KEY
 
-# IP Geolocation API
-ip.base.url=http://ip-api.com/json/
+#### IP Geolocation API
+* ip.base.url=http://ip-api.com/json/
 
-# Google Configuration
-MAP_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
-api.secret=YOUR_GOOGLE_MAPS_SECRET
-client.id=YOUR_GOOGLE_NATIVE_CLIENT_ID
+#### Google Configuration
+* MAP_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+* api.secret=YOUR_GOOGLE_MAPS_SECRET
+* client.id=YOUR_GOOGLE_NATIVE_CLIENT_ID
 
-# Firebase Configuration
-project.id=YOUR_FIREBASE_PROJECT_ID
-storage.url=YOUR_FIREBASE_STORAGE_BUCKET_URL
+#### Firebase Configuration
+* project.id=YOUR_FIREBASE_PROJECT_ID
+* storage.url=YOUR_FIREBASE_STORAGE_BUCKET_URL
 
-# Supabase Configuration (Auth, Realtime, PostgREST)
-supabase.url=YOUR_SUPABASE_URL
-supabase.api.key=YOUR_SUPABASE_API_KEY
+#### Supabase Configuration (Auth, Realtime, PostgREST)
+* supabase.url=YOUR_SUPABASE_URL
+* supabase.api.key=YOUR_SUPABASE_API_KEY
 
 
 
