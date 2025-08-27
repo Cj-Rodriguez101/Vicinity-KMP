@@ -32,6 +32,7 @@ Compose Multiplatform MultiModule Project to Help User Find Events (KMP - Androi
 * Calendar [Calendar](https://github.com/kizitonwose/Calendar)
 * Android GeoHash [Android GeoHash](https://github.com/drfonfon/android-kotlin-geohash)
 * JVM GeoHash [JVM Geohash](https://github.com/kungfoo/geohash-java)
+* Shimmer [Shimmer](https://github.com/valentinilk/compose-shimmer)
 
 ## To Test
 To be added
