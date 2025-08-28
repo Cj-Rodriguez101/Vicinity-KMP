@@ -70,8 +70,12 @@ https://github.com/user-attachments/assets/b563fda1-7203-456e-97ad-a1c397c6f248
 ### Log Out and Input Validation
 https://github.com/user-attachments/assets/852638e2-09bf-48de-8ea9-6642e24f9208
 
-
-
+## Credits
+* Design Inspirations From [Stitch](https://stitch.withgoogle.com), [MagicPatterns](https://www.magicpatterns.com) Event Brite and Ticket Master Api
+* Github Actions for android [Actions](https://www.youtube.com/watch?v=Fh4UyfqeB4Y)
+* Project Structure inspired by [Runique](https://github.com/philipplackner/Runique/tree/9957271f8a449688f228ebeb79097cb29cd8fc29)
+* Developers and maintainers of all the libraries listed in the Tools section
+  
 ## Important Notice
 This project requires a specific Supabase database schema to function properly. Simply adding API keys will not be sufficient to run the project locally, as you would need to recreate the exact database tables and structure.
 However these are the breakdown of the constants in local.properties
