@@ -75,6 +75,7 @@ https://github.com/user-attachments/assets/852638e2-09bf-48de-8ea9-6642e24f9208
 * Github Actions for android [Actions](https://www.youtube.com/watch?v=Fh4UyfqeB4Y)
 * Project Structure inspired by [Runique](https://github.com/philipplackner/Runique/tree/9957271f8a449688f228ebeb79097cb29cd8fc29)
 * Developers and maintainers of all the libraries listed in the Tools section
+* [Petyr47](https://github.com/petyr47) for PR reviews and testing
   
 ## Important Notice
 This project requires a specific Supabase database schema to function properly. Simply adding API keys will not be sufficient to run the project locally, as you would need to recreate the exact database tables and structure.
