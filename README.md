@@ -1,5 +1,5 @@
 # Vicinity KMP
-Compose Multiplatform MultiModule Project to Help User Find Events (KMP - Android, IOS, Desktop)
+Compose Multiplatform MultiModule Project to Help User Find Events In Their Vicinity (KMP - Android, IOS, Desktop)
 
 Sample Project to re-use checkpoint for future KMP Projects
 
@@ -10,7 +10,7 @@ Sample Project to re-use checkpoint for future KMP Projects
 * Like Any Event, Syncing Likes in Real time across devices
 * Share Events Between Users - Deeplink on Android And IOS
 * Login, Sign Up and Delete Account
-* Filter and Sort Events Based On Classification and Dates
+* Filter and Sort Events Based On Classification and Date(s)
 * Display Real time charts of trend events based on user likes
 * Display Events Happening iN Location Based On Visible Map Bounds
 * Update User Profile Data (Picture, bio, name, password) syncing in Real time across devices
