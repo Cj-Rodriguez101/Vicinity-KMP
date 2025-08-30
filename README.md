@@ -12,14 +12,14 @@ Sample Project to re-use checkpoint for future KMP Projects
 * Login, Sign Up and Delete Account
 * Filter and Sort Events Based On Classification and Date(s)
 * Display Real time charts of trend events based on user likes
-* Display Events Happening iN Location Based On Visible Map Bounds
+* Display Events Happening At a Location Based On Visible Map Bounds
 * Update User Profile Data (Picture, bio, name, password) syncing in Real time across devices
 
 ## Architecture - MVVM/MVI
 ## Tools
 * Jetpack Compose - Compose Multiplatform [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform)
-* Supabase for auth and real time database [Supabase](https://github.com/supabase-community/supabase-kt)
-* Firebase storage and Crashlytics [Firebase](https://github.com/GitLiveApp/firebase-kotlin-sdk)
+* Supabase for auth, postgrest and real time [Supabase](https://github.com/supabase-community/supabase-kt)
+* Firebase storage, App distribution and Crashlytics [Firebase](https://github.com/GitLiveApp/firebase-kotlin-sdk)
 * Compass [Compass](https://github.com/jordond/compass)
 * Connectivity [Connectivity](https://github.com/jordond/connectivity)
 * Github Actions [Github Actions](https://github.com/features/actions)
@@ -38,8 +38,9 @@ Sample Project to re-use checkpoint for future KMP Projects
 * Shimmer [Shimmer](https://github.com/valentinilk/compose-shimmer)
 * Kotlin Serialization [Serialization](https://kotlinlang.org/docs/serialization.html#formats)
 * Ticket Master Discover Api [Discover](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2)
-* Location Iq [LIQ](https://my.locationiq.com)
-* IP Location Api [IP](http://ip-api.com/json/)
+* Location Iq for Auto Complete Location Search[LIQ](https://my.locationiq.com)
+* IP Location Api for Desktop Location [IP](http://ip-api.com/json/)
+* Compose Icons [Icons](https://github.com/DevSrSouza/compose-icons)
 
 <img width="1589" height="948" alt="Screenshot 2025-08-27 at 17 21 45" src="https://github.com/user-attachments/assets/ff81b22d-4857-4165-8307-46d46fb35305" />
 
@@ -54,7 +55,7 @@ https://github.com/user-attachments/assets/84d2b361-3a05-4335-b5a4-d6b2740a44ba
 https://github.com/user-attachments/assets/fb6239cf-7a8f-4173-b838-492db2b202d7
 
 
-### Realtime Trending
+### Realtime Trending Charts
 https://github.com/user-attachments/assets/c8c2cdd5-f4f7-4dac-a701-a90385996282
 
 ### Share and Deeplink(IOS and Android)
